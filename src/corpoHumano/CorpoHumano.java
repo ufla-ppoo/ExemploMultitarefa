@@ -3,12 +3,14 @@ package corpoHumano;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class CorpoHumano {
+public class CorpoHumano {
     private boolean vivo;
+    private int tempoDeVida;
     private List<Runnable> tarefasDoCorpo;
 
-    public CorpoHumano() {
+    public CorpoHumano(int tempoDeVida) {
         vivo = false;
+        this.tempoDeVida = tempoDeVida;
         construirTarefas();
     }
     
@@ -27,7 +29,20 @@ public abstract class CorpoHumano {
         }
     }
 
-    public abstract void realizarAcao(AcaoCorpoHumano acao);
+    public void realizarAcao(AcaoCorpoHumano acao) {
+        if (acao == AcaoCorpoHumano.BATER_CORACAO) {
+            System.out.println("Bateu coração...");
+        }
+        else if (acao == AcaoCorpoHumano.RESPIRAR) {
+            System.out.println("Respirou...");
+        }
+        else if (acao == AcaoCorpoHumano.PISCAR_OLHOS) {
+            System.out.println("Piscou os olhos...");
+        }
+        else {
+            throw new IllegalArgumentException("Enum " + acao + " nao foi tratado!");
+        }   
+    }
 
     public void morrer() {
         vivo = false;
@@ -35,5 +50,9 @@ public abstract class CorpoHumano {
 
     public boolean estahVivo() {
         return vivo;
+    }
+
+    public int getTempoDeVida() {
+        return tempoDeVida;
     }
 }
