@@ -3,7 +3,7 @@
 Este projeto é usado como exemplo nas aulas de Multitarefa em disciplinas de Programação Orientada a Objetos.
 O conteúdo é bem simples e apresenta apenas o básico do básico do uso de `Threads` em Java, sem entrar em problemas de concorrência, interrupção, etc.
 
-O código do projeto é baseado em uma [versão inicial](https://github.com/ufla-ppoo/GCC178-Projetos-das-Aulas/blob/master/Multitarefa) criada pelo Prof. Paulo Afonso (DCC/ICET/UFLA).
+O código do pacote `corpoHumano` é baseado em uma [versão inicial](https://github.com/ufla-ppoo/GCC178-Projetos-das-Aulas/blob/master/Multitarefa) criada pelo Prof. Paulo Afonso (DCC/ICET/UFLA).
 
 ## Multitarefa
 
@@ -229,5 +229,11 @@ Avalie o código das tarefas e como as _threads_ são tratadas na classe `CorpoH
 
 Experimente executar o programa, rodando a partir da classe `App` que está dentro do pacote.
 
+## Isso é apenas o começo
 
+Os conceitos apresentados aqui são apenas o básico do básico do uso de _threads_ em Java.
+Para a implementação de um sistema que realmente aproveite as vantagens da programação concorrente, é necessário tratar e evitar problemas como: condição de corrida (*racing conditions*) e impasses (*deadlocks*), geralmente utilizando bloqueios (semáforos).
+Tais problemas ocorrem porque mais de uma _thread_ pode tentar acessar o mesmo recurso ao mesmo tempo, ou a lógica de um sistema pode depender da ordem como as coisas são feitas.
+
+Para quem tiver interesse, vale a pena aprofundar no assunto, especialmente estudando o uso da palavra-chave `syncronized` do Java, que garante que um objeto terá métodos executados por apenas uma _thread_ por vez, minimizando os problemas de acesso concorrente.
 
