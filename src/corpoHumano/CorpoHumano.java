@@ -5,10 +5,12 @@ import java.util.List;
 
 public class CorpoHumano {
     private boolean vivo;
+    private int tempoDeVida;
     private List<Runnable> tarefasDoCorpo;
 
-    public CorpoHumano() {
+    public CorpoHumano(int tempoDeVida) {
         vivo = false;
+        this.tempoDeVida = tempoDeVida;
         construirTarefas();
     }
     
@@ -25,7 +27,7 @@ public class CorpoHumano {
             Thread th = new Thread(tarefa);
             th.start();
         }
-    }    
+    }
 
     public void morrer() {
         vivo = false;
@@ -48,5 +50,9 @@ public class CorpoHumano {
         else {
             throw new IllegalArgumentException("Enum " + acao + " nao foi tratado!");
         }
+    }
+
+    public int getTempoDeVida() {
+        return tempoDeVida;
     }
 }
