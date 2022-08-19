@@ -221,5 +221,13 @@ O pacote `exemploSleep` traz um código de exemplo de uma tarefa que usa o méto
 Neste exemplo, a classe principal cria dois objetos da tarefa `TarefaComSleep`, cada uma com um tempo de suspensão diferente.
 Experimente executar o programa, rodando a partir da classe `App` que está dentro do pacote.
 
+### Exemplo do Corpo Humano
+
+Outro exemplo é apresentado no pacote `corpoHumano`.
+Este projeto possui três tarefas: bater coração, piscar os olhos e respirar.
+Avalie o código das tarefas e como as _threads_ são tratadas na classe `CorpoHumano`.
+
+Experimente executar o programa, rodando a partir da classe `App` que está dentro do pacote.
+
 
 

@@ -19,8 +19,8 @@ public class BaterCoracao implements Runnable {
                 // i.e. uma batida a cada 0.52 segundos.
                 corpo.realizarAcao(AcaoCorpoHumano.BATER_CORACAO);
                 Thread.sleep(520);
+                
                 tempoBatendo += 520;
-
                 if (tempoBatendo/1000 > corpo.getTempoDeVida()) {
                     corpo.morrer();
                 }
