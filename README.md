@@ -1,4 +1,4 @@
-# Projeto Corpo Humano
+# Exemplos de programas Multitarefa
 
 Este projeto é usado como exemplo nas aulas de Multitarefa em disciplinas de Programação Orientada a Objetos.
 O conteúdo é bem simples e apresenta apenas o básico do básico do uso de `Threads` em Java, sem entrar em problemas de concorrência, interrupção, etc.
