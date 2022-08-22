@@ -27,10 +27,12 @@ Quando iniciamos o nosso programa, uma _thread_ principal é criada e executada 
 Mas nós podemos criar novas _threads_ em qualquer ponto do nosso pograma, usando um objeto de uma classe com o nome bem sugestivo de `Thread` :)
 Para criar e executar uma nova _thread_ nós precisamos, basicamente, de: (1) criar um objeto dessa classe passando uma tarefa a ser executada e (2) executar a _thread_ chamando o método `start()`.
 
-Para que o objeto da classe `Thread` saiba como executar a tarefa passada no construtor, é necessário que esta tarefa siga um contrato definido pela inteface `Runnable`.
+Para que o objeto da classe `Thread` saiba como executar a tarefa passada no construtor, é necessário que esta tarefa siga um contrato definido pela inteface `Runnable` do Java.
 Esta inteface possui um único método chamado `run` (como mostrado no código abaixo).
 
 ```java
+// Essa seria a implementação da interface
+// Obs.: você não deve criá-la, ela já existe no Java.
 public interface Runnable {
     void run();
 }
@@ -56,14 +58,14 @@ Para executarmos essa tarefa em uma _thread_ separada da _thread_ principal nós
 ```java
 public class App {
     public static void main(String[] args) {
-        System.out.println("Criando a tarefa a ser executada")    
+        System.out.println("Criando a tarefa a ser executada");
         Tarefa tarefa = new Tarefa();
 
-        System.out.println("Criando o objeto de uma nova thread com a tarefa passada!")
+        System.out.println("Criando o objeto de uma nova thread com a tarefa passada!");
         Thread thread = new Thread(tarefa);
 
-        System.out.println("Iniciando a execução da thread!")
-        tarefa.start()
+        System.out.println("Iniciando a execução da thread!");
+        thread.start();
 
         System.out.println("Terminano o método main!")
     }
