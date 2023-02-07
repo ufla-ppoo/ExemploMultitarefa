@@ -206,7 +206,7 @@ Você consegue imaginar quais?
 1. Primeiro que a modelagem OO fica estranha. 
    Repare que a modelagem fica mais clara, quando nossa classe representa uma tarefa a ser executada pela _thread_.
    Já quando a classe herda de `Thread` ela é um tipo específico de _thread_, o que não representa bem o que ela faz.
-   Sem conta que a classe acaba herdando diversos outros métodos que, muitas das vezes, não estamos interessados.
+   Sem contar que a classe acaba herdando diversos outros métodos que, muitas das vezes, não estamos interessados.
 
 2. Outro ponto é que herdar de `Thread` limita a herança múltipla.
    Como em Java uma classe pode herdar de apenas uma superclasse, a nossa classe que realiza a tarefa não poderá herdar de nenhuma outra classe.
